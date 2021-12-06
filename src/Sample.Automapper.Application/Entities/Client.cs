@@ -1,10 +1,11 @@
 ﻿
-using Sample.Automapper.WebApi.Core.Abstractions;
+using Sample.Automapper.Application.ViewModels;
 
-namespace Sample.Automapper.WebApi.Core.ViewModels
+namespace Sample.Automapper.Application.Entities
 {
-    public class ClientViewModel
+    public class Client
     {
+        public virtual Guid Id { get; set; }
         public virtual string? Name { get; set; }
         public virtual string? Email { get; set; }
         public virtual GenderType Gender { get; set; }

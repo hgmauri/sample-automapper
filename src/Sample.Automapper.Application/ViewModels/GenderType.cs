@@ -1,5 +1,5 @@
 ﻿
-namespace Sample.Automapper.WebApi.Core.Abstractions
+namespace Sample.Automapper.Application.ViewModels
 {
     public enum GenderType
     {

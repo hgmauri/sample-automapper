@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Sample.Automapper.WebApi.Core.Abstractions;
-using Sample.Automapper.WebApi.Core.ViewModels;
+using Sample.Automapper.Application.Application;
+using Sample.Automapper.Application.ViewModels;
 
 namespace Sample.Automapper.WebApi.Controllers;
 
@@ -16,9 +16,17 @@ public class ClientController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody] ClientViewModel model)
+    public async Task<IActionResult> PostClient([FromBody] ClientViewModel model)
     {
-        var validation = await _clientApplication.AddClient(model);
+        var validation = await _clientApplication.AddClientAsync(model);
+
+        return Ok(validation);
+    }
+
+    [HttpPost("group")]
+    public async Task<IActionResult> PostGroup([FromBody] GroupViewModel model)
+    {
+        var validation = await _clientApplication.AddGroupAsync(model);
 
         return Ok(validation);
     }

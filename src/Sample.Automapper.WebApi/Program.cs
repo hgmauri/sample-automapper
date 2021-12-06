@@ -1,6 +1,5 @@
-using Sample.Automapper.WebApi.Core;
-using Sample.Automapper.WebApi.Core.Abstractions;
-using Sample.Automapper.WebApi.Core.Application;
+using Sample.Automapper.Application;
+using Sample.Automapper.Application.Application;
 using Sample.Automapper.WebApi.Core.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
