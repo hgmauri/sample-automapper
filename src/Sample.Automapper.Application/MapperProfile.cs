@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿    using AutoMapper;
 using Sample.Automapper.Application.Entities;
 using Sample.Automapper.Application.ViewModels;
 
