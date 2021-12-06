@@ -13,10 +13,11 @@ public class MapperProfile : Profile
 
         //Group
         CreateMap<Group, GroupViewModel>().ReverseMap()
+            .ForMember(dest => dest.Description, src => src.Ignore())
             .AfterMap((src, dest) =>
             {
                 dest.CreatedAt = DateTime.Now;
-                dest.Id = Guid.NewGuid();
+                dest.Description = dest.Name;
             });
     }
 }
